@@ -37,6 +37,19 @@
 
 /*=============== BASE ===============*/
 
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+input,
+textarea,
+button,
+body{
+  font-family: var(--body-font);
+  font-size: var(--large-font-size);
+  
+}
 
 
 /*=============== REUSABLE CSS CLASSES ===============*/
