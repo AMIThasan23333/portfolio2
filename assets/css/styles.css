@@ -665,6 +665,22 @@ font-size: var(--h2-font-size);
 
 /*=============== PORTFOLIO ===============*/
 
+.work__container {
+  grid-template-columns: repeat(3,1fr);
+
+}
+
+.work__card {
+  position: relative;
+  cursor: pointer;
+}
+
+.work__details {
+  position: absolute;
+  inset: 0;
+  background-color: hsla(0, 0%, 0%, 0.05);
+}
+
 /* Work hover */
 
 /*=============== TESTIMONIALS ===============*/
