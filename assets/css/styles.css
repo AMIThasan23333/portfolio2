@@ -857,8 +857,16 @@ html{
   background-color: var(--container-color);
   border-radius: 0.5rem;
   z-index: 1000;
+  transform: translateX(100%);
+  transition: all .3s ease;
 
 }
+
+#toggler:checked ~ .style__switcher{
+  transform: translateX(0);
+}
+
+
 
 .style__switcher-toggler,
 .style__switcher-theme{
@@ -872,14 +880,75 @@ html{
   border-radius: 50%;
   cursor: pointer;
   display: grid;
+  place-items: center;
 }
 
-.style__switcher-colors .colors {
+.style__switcher-colors {
+  display: grid;
+  grid-template-columns: repeat(5,1fr);
+  gap: .5rem;
+}
+
+
+.style__switcher-colors .color {
   height: 30px;
   width: 30px;
   border-radius: 50%;
 }
  
+.color-1 {
+  background-color: hsl(268,77%,58%);
+}
+.color-2 {
+  background-color: hsl(351,77%,58%);
+}
+.color-3 {
+  background-color: hsl(298,77%,58%);
+}
+.color-4 {
+  background-color: hsl(218,77%,58%);
+}
+.color-5 {
+  background-color: hsl(228,77%,58%);
+}
+.color-6 {
+  background-color: hsl(288,77%,58%);
+}
+.color-7 {
+  background-color: hsl(208,77%,58%);
+}
+.color-8 {
+  background-color: hsl(128,77%,58%);
+}
+.color-9 {
+  background-color: hsl(68,77%,58%);
+}
+.color-10 {
+  background-color: hsl(28,77%,58%);
+}
+
+.style__switcher-toggler {
+  top: 7%;
+
+}
+
+.style__switcher-theme {
+  bottom: 7%;
+}
+
+.style__switcher-theme  .fa-moon{
+display: none;
+}
+
+#day-night:checked ~ * .fa-moon {
+  display:block;
+}
+#day-night:checked ~ * .fa-sun {
+  display: none;
+}
+
+
+
 /*=============== BREAKPOINTS ===============*/
 /* For large devices */
 @media screen and (max-width: 1200px) {
