@@ -35,6 +35,14 @@
 
 /*=============== DARK THEME ===============*/
 
+#day-night:checked ~ * {
+  --title-color: hsl(247,27%,31%);
+  --text-color: hsl(0,0%,41%);
+  --body-color:hsl(0, 0%, 100%);
+  --container-color: hsl(266,78%,98%);
+  --border-color:hsl(0,0%,87%);
+}
+
 /*=============== BASE ===============*/
 
 *{
@@ -68,7 +76,7 @@ button{
 
 h1,h2,h3 {
 
-  color: var(--title-color);
+  color: var(---first-color);
   font-weight: var(--weight-600);
 }
 
@@ -364,6 +372,7 @@ html{
 .about__container {
   grid-template-columns: 4fr 8fr;
   align-items: center;
+  /* --body-color:hsl(200, 12%, 5%); */
 
 }
 
@@ -700,7 +709,7 @@ html{
 
 .work__title ,
 .work__description {
-  color: var(--white);
+  color: var(--first-color);
   transform: translateY(1.5rem);
   transition: all .3s ease-in-out;
 
@@ -847,6 +856,13 @@ html{
 
 }
 
+input[type='radio'],
+input[type='checkbox']
+{
+  z-index: 1000;
+  position: relative;
+}
+
 .style__switcher {
   position: fixed;
   right: 0;
@@ -859,7 +875,6 @@ html{
   z-index: 1000;
   transform: translateX(100%);
   transition: all .3s ease;
-
 }
 
 #toggler:checked ~ .style__switcher{
@@ -927,6 +942,89 @@ html{
   background-color: hsl(28,77%,58%);
 }
 
+#color-1:checked ~ * {
+
+  ---first-color: hsl(252,35%,51%);
+  --first-color-dark:hsl(252,25%,51%);
+  --first-color-light:hsl(252,100%,83%);
+}
+
+
+#color-2:checked ~ * {
+
+  ---first-color: hsl(352,85%,51%);
+  --first-color-dark:hsl(352,75%,51%);
+  --first-color-light:hsl(351,100%,83%);
+  
+
+}
+
+
+#color-3:checked ~ * {
+
+  ---first-color: hsl(272,76%,53%);
+  --first-color-dark:hsl(272,60%,53%);
+  --first-color-light:hsl(272,100%,83%);
+}
+
+
+#color-4:checked ~ * {
+
+  ---first-color: hsl(225,73%,57%);
+  --first-color-dark:hsl(225,63%,57%);
+  --first-color-light:hsl(225,100%,83%);
+}
+
+#color-5:checked ~ * {
+
+  ---first-color: hsl(43,74%,49%);
+  --first-color-dark:hsl(43,64%,49%);
+  --first-color-light:hsl(43,100%,83%);
+}
+
+
+#color-6:checked ~ * {
+
+  ---first-color: hsl(339,81%,66%);
+  --first-color-dark:hsl(339,71%,66%);
+  --first-color-light:hsl(339,100%,83%);
+}
+
+#color-7:checked ~ * {
+
+  ---first-color: hsl(19,35%,51%);
+  --first-color-dark:hsl(19,25%,51%);
+  --first-color-light:hsl(19,100%,83%);
+}
+
+
+#color-8:checked ~ * {
+
+  ---first-color: hsl(19,96%,52%);
+  --first-color-dark:hsl(19,75%,51%);
+  --first-color-light:hsl(19,100%,83%);
+  
+
+}
+
+#color-9:checked ~ * {
+
+  ---first-color: hsl(88,85%,51%);
+  --first-color-dark:hsl(88,75%,51%);
+  --first-color-light:hsl(88,100%,83%);
+  
+
+}
+
+#color-10:checked ~ * {
+
+  ---first-color: hsl(52,85%,51%);
+  --first-color-dark:hsl(52,75%,51%);
+  --first-color-light:hsl(51,100%,83%);
+  
+
+}
+
 .style__switcher-toggler {
   top: 7%;
 
@@ -935,17 +1033,17 @@ html{
 .style__switcher-theme {
   bottom: 7%;
 }
-
 .style__switcher-theme  .fa-moon{
 display: none;
 }
-
 #day-night:checked ~ * .fa-moon {
   display:block;
 }
 #day-night:checked ~ * .fa-sun {
   display: none;
 }
+
+
 
 
 
