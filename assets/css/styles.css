@@ -674,14 +674,48 @@ font-size: var(--h2-font-size);
   position: relative;
   cursor: pointer;
 }
-
+.work__img {
+  vertical-align: middle;
+}
 .work__details {
   position: absolute;
   inset: 0;
   background-color: hsla(0, 0%, 0%, 0.05);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: all .4s ease-in-out;
+
 }
 
+.work__img,
+.work__details{
+  border-radius: .5rem;
+
+}
+
+.work__title ,
+.work__description {
+  color: var(--white);
+  transform: translateY(1.5rem);
+  transition: all .3s ease-in-out;
+
+}
+
+.work__description{
+  font-size: var(--large-font-size);
+}
 /* Work hover */
+
+.work__card:hover .work__details {
+  opacity: 1;
+}
+
+.work__card:hover :is(.work__title, .work__description){
+  transform: translateY(0);
+}
 
 /*=============== TESTIMONIALS ===============*/
 
